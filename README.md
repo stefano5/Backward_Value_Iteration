@@ -70,7 +70,7 @@ Enter the node's name you want to reach, for example:
 ```
 [D] is the arrival node
 
-Chose which optimal path to see. Enter a starting node: 
+Choose which optimal path to see. Enter a starting node: 
 
 ```
 
@@ -81,7 +81,7 @@ The program ended, now try to deal with the output.
 The output is: 
 
 ```
-Table with optimal cost
+Table with optimal costs
         A       B       C       D       E       F       G
 G_10    inf     inf     inf     0       inf     inf     inf
 G_9     inf     inf     1       0       4       inf     1
@@ -118,7 +118,7 @@ Optimal path:
         D
 ```
 
-The first table show the intermediate optimal cost, for each steps. 
+The first table show the intermediate optimal costs, for each steps. 
 EG: G_9 means that in just one step we can reach D from the nodes C,E,G only with optimal cost 1,4,1 respectively. Then don't exist any path in just one step that allow as to reach the node D from the others nodes A,B,F (where the cost is infinite). If you watch the graph it is trivial.
 
 The second table show the optimal parents. Our solutions are just there.
@@ -132,7 +132,7 @@ There are two function that give us the solution, the first one just return the 
 We are already arrived
 A --> F --> C --> D with total cost 4
 ```
-The second one return a vector<Node> thah will be printed in the main function as following:
+The second one return a vector<Node> that will be printed in the main function as following:
 
 ```
 We are already arrived
@@ -242,6 +242,7 @@ graph.compute_optimal_cost(n_iteration, arrival_node);
   Insted, to get the optimal path:
 ```
 std::string starting_node = "A";
+std::vector<Node> op = graph.get_optimal_path(starting_node);
 for (Node n:op) {
     std::cout << "\t" << n.get_head() << std::endl;
     //move_my_robot_to(n.get_head()); // For example
