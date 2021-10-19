@@ -14,7 +14,7 @@ Suppose you have this graph:
 
 ![Screenshot_20211008_180101](https://user-images.githubusercontent.com/40228829/136588092-a8d62aab-38d9-4f70-bda1-c40776c8669d.png)
 
-You need to create a file when, for each row, you write: tail,head,cost
+You need to create a file where, for each row, you write: tail,head,cost
 
 For example, the file for the previous graph is:
 ```
